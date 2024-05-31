@@ -1,7 +1,11 @@
+// Zach McLean
+// CSCI 3240
+// Loops & Functions
+// Lab 2 | Problem 2
+
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to calculate factorial of a number
 unsigned long long factorial(int num) {
     unsigned long long fact = 1;
     for (int i = 1; i <= num; i++) {
@@ -24,7 +28,7 @@ int main(int argc, char *argv[]) {
     // Check if the correct number of arguments are provided
     if (argc != 3) {
         printf("Usage: %s <n> <r>\n", argv[0]);
-        return 1; // Return with error code if arguments are incorrect
+        return 1; 
     }
 
     // Convert the command line arguments to integers
@@ -37,13 +41,11 @@ int main(int argc, char *argv[]) {
         return 1; // Return with error code if n or r are out of range
     }
 
-    // Calculate permutation and combination
     unsigned long long perm = permutation(n, r);
     unsigned long long comb = combination(n, r);
 
-    // Print the results
     printf("P(%d,%d) = %llu\n", n, r, perm);
     printf("C(%d,%d) = %llu\n", n, r, comb);
 
-    return 0; // Successful execution
+    return 0; 
 }
